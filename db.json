@@ -1,6 +1,25 @@
 {
   "usersList": [
-    
+    {
+      "productName": "Nikhil Kumar",
+      "username": "dsjdshds",
+      "phoneNo": "8310755429",
+      "emailId": "nikhiljs@dd.com",
+      "address": "Flat No 203 Tower S3-a Supertech Ecovillage -1",
+      "city": "Bisrakh Jalalpur",
+      "zipcode": "201306",
+      "id": 1
+    },
+    {
+      "productName": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "phoneNo": "586.493.6943 x140",
+      "emailId": "Sherwood@rosamond.me",
+      "address": "Ellsworth Summhdsh",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "id": 2
+    }
   ],
   "comments": [
     {

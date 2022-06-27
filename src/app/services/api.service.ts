@@ -10,6 +10,6 @@ export class ApiService {
 
   adduser(data : any)
   {
-      return this.http.post<any>("localhost:3000/usersList",data);
+      return this.http.post<any>("http://localhost:3000/usersList",data);
   }
 }

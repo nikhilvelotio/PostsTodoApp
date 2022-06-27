@@ -23,13 +23,23 @@ export class DialogComponent implements OnInit {
             city : ['',Validators.required],
             zipcode : ['',Validators.required]
         })
-
-        console.log(this.data);
+        
+        if(this.data)
+        {
+            this.userForm.setValue({
+              productName : this.data.name,
+              username : this.data.username,
+              phoneNo : this.data.phone,
+              emailId : this.data.email,
+              address : this.data.address['street'],
+              city : this.data.address['city'],
+              zipcode : this.data.address['zipcode']
+            })
+        }
   }
   
   adduser()
   {
-      console.log(this.userForm.value);
       if(this.userForm.valid)
       {
           this.api.adduser(this.userForm.value).subscribe({

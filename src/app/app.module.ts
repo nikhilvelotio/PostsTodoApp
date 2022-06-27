@@ -14,13 +14,17 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from  '@angular/material/form-field'
 import { DialogComponent } from './dialog/dialog.component';
-import {MatCardModule} from '@angular/material/card'
+import {MatCardModule} from '@angular/material/card';
+import { PostslistComponent } from './postslist/postslist.component';
+import { TodolistComponent } from './todolist/todolist.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    DialogComponent
+    DialogComponent,
+    PostslistComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
