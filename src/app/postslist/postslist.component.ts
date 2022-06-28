@@ -10,6 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class PostslistComponent implements OnInit {
   id: number = -1;
   list_posts : any = [];
+  name_of_user : any;
   constructor(private router : Router , private route: ActivatedRoute , private http : HttpClient) { }
 
   ngOnInit(): void {
@@ -21,6 +22,7 @@ export class PostslistComponent implements OnInit {
           this.id = +params['id'];
         }
       });
+    
     this.get_list_posts(this.id).subscribe((val) => {
       let json: any;
            if (val) {
@@ -28,13 +30,21 @@ export class PostslistComponent implements OnInit {
            } else {
                return;
            }
-      
-            for (const obj of json) {
-                if (obj) {
-                    this.list_posts.push(obj);
-                }
-           }  
+           const uid = json[0]['userId'];
+           this.http.get(`https://jsonplaceholder.typicode.com/users/${uid}`).subscribe((val) => {
+                     let x1: any;
+                     if (val) {
+                         x1 = val;   
+                     }
+                    this.name_of_user = x1['name'];
+           })
+           for (const obj of json) {
+            if (obj) {
+                this.list_posts.push(obj);
+            }
+       }
     });
+
   }
   
   get_list_posts(id:any)
@@ -44,7 +54,9 @@ export class PostslistComponent implements OnInit {
           return this.http.get<any>("https://jsonplaceholder.typicode.com/posts");
       }
       else{
-        return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        // const params1 = new HttpParams();
+        // params1.append('userId', id);
+        return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts?userId=${id}`);
       }
   }
 }
