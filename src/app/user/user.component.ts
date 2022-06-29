@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient } from '@angular/common/http'
 import { MatAccordion } from '@angular/material/expansion';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-user',

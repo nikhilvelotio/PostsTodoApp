@@ -13,10 +13,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from  '@angular/material/form-field'
-import { DialogComponent } from './dialog/dialog.component';
+import { DialogComponent } from './user/dialog/dialog.component';
 import {MatCardModule} from '@angular/material/card';
 import { PostslistComponent } from './postslist/postslist.component';
-import { TodolistComponent } from './todolist/todolist.component'
+import { TodolistComponent } from './todolist/todolist.component';
+import { PostdialogComponent } from './postslist/postdialog/postdialog.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TodolistComponent } from './todolist/todolist.component'
     UserComponent,
     DialogComponent,
     PostslistComponent,
-    TodolistComponent
+    TodolistComponent,
+    PostdialogComponent
   ],
   imports: [
     BrowserModule,

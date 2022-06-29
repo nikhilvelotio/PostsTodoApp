@@ -1,0 +1,37 @@
+<div class = "container1">
+    <h1>  {{this.data.title}} </h1> 
+    
+    <p>  {{this.data.body}} </p>
+</div>
+
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px">
+      <div fxFlex="1 1 25%"  *ngFor="let x of this.data.comments">
+    
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>
+           {{x.name}}
+    
+          <p>{{x.email}}</p> 
+        </mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+             {{x.body}}
+        </mat-card-content>
+
+      </mat-card>
+       </div>
+    </div>
+</div>
+
+<form #f (ngSubmit)="sub_post(f)">
+      <mat-form-field>
+        <mat-label> Add your comment here </mat-label>
+         <input id ="x11" type = "textarea"/>
+      </mat-form-field>
+
+      <button >Add comment</button>
+</form>
