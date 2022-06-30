@@ -27,11 +27,10 @@
     </div>
 </div>
 
-<form #f (ngSubmit)="sub_post(f)">
-      <mat-form-field>
-        <mat-label> Add your comment here </mat-label>
-         <input id ="x11" type = "textarea"/>
-      </mat-form-field>
-
+<form #f="ngForm" (ngSubmit)="sub_post(f)">
+    <div class="form-group">
+        <label for="x11"> Add your comment here </label>
+         <input id ="x11"   type="textarea" name="comm" ngModel/>
+    </div>
       <button >Add comment</button>
 </form>

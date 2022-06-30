@@ -19,13 +19,48 @@
       "city": "Aliyaview",
       "zipcode": "45169",
       "id": 2
+    },
+    {
+      "productName": "Chelsey Dietrich",
+      "username": "Kamren Nicole",
+      "phoneNo": "(254)954-1289",
+      "emailId": "Lucio_Hettinger@annie.ca",
+      "address": "Skiles Walks",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "id": 3
+    },
+    {
+      "productName": "Clementine Bauch",
+      "username": "Samantha akkaneni jhjhj",
+      "phoneNo": "1-463-123-4447",
+      "emailId": "Nathan@yesenia.net",
+      "address": "Douglas Extension",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "id": 4
+    },
+    {
+      "productName": "Chelsey Dietrich",
+      "username": "Kamren sfdj h",
+      "phoneNo": "(254)954-1289",
+      "emailId": "Lucio_Hettinger@annie.ca",
+      "address": "Skiles Walks",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "id": 5
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "postid": 2,
+      "comment": "ksfshsdhjf",
+      "id": 1
+    },
+    {
+      "postid": 4,
+      "comment": "good positive scenario ",
+      "id": 2
     }
   ],
   "profile": {

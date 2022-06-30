@@ -85,10 +85,10 @@ export class PostslistComponent implements OnInit {
         
      })
      val['comments']= comm;
-     console.log(val);
      this.dialog.open(PostdialogComponent, {
       width : '60%',
-      data : val
+      data : val,
+      maxHeight: '90vh'
    });
   }
 }

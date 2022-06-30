@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup , Validators} from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class DialogComponent implements OnInit {
   userForm!: FormGroup;
-  constructor(private fb: FormBuilder, private api : ApiService , @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(private fb: FormBuilder, private api : ApiService , @Inject(MAT_DIALOG_DATA) public data: any , private d1 : MatDialogRef<DialogComponent>) { }
 
   ngOnInit(): void {
        this.userForm = this.fb.group(
@@ -45,6 +45,7 @@ export class DialogComponent implements OnInit {
           this.api.adduser(this.userForm.value).subscribe({
             next : (res) =>{
               alert("User added successfully!!!");
+              this.d1.close();
             }
             ,
             error: ()=>{
