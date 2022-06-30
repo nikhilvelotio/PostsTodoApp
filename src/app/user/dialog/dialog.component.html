@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>Add a user</h1>
+
+<form [formGroup]="userForm">
+<div mat-dialog-content>
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input formControlName="productName"  matInput placeholder="Mohan" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Username</mat-label>
+    <input formControlName="username" matInput placeholder="nikhil890" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Phone No.</mat-label>
+    <input formControlName="phoneNo" matInput >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input formControlName="emailId" type="email" matInput placeholder="xyz@pqr.com">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Address</mat-label>
+    <input formControlName="address" matInput placeholder="Enter your address here">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>City</mat-label>
+    <input formControlName="city" matInput placeholder="Enter your city here">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>zipcode</mat-label>
+    <input formControlName="zipcode"  matInput placeholder="Enter your pincode here">
+  </mat-form-field>
+
+</div>
+
+</form>
+
+<div class="example-button-row">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left : 10px" mat-raised-button color="primary" (click)="adduser()">Save</button>
+</div>
