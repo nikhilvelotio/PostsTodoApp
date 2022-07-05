@@ -1,7 +1,10 @@
 <router-outlet></router-outlet>
 
-
-<nav>
-    <a routerLink="posts" routerLinkActive="active">Posts</a>
-    <a routerLink="todos" routerLinkActive="active">Todos</a>
-</nav>
+<mat-tab-group>
+    <mat-tab label="Posts">
+        <app-postslist></app-postslist>
+    </mat-tab>
+    <mat-tab label="Todos"> 
+        <app-todolist></app-todolist>
+    </mat-tab>
+</mat-tab-group>

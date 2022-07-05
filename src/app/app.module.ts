@@ -12,11 +12,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from  '@angular/material/form-field'
 import { DialogComponent } from './user/dialog/dialog.component';
 import {MatCardModule} from '@angular/material/card';
 import { PostslistComponent } from './postslist/postslist.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import {MatTabsModule} from '@angular/material/tabs';
 import { PostdialogComponent } from './postslist/postdialog/postdialog.component'
 
 @NgModule({
@@ -38,8 +40,10 @@ import { PostdialogComponent } from './postslist/postdialog/postdialog.component
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
+    MatMenuModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatTabsModule,
     MatCardModule,
     ReactiveFormsModule,
     BrowserAnimationsModule

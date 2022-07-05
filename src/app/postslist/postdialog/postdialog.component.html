@@ -13,9 +13,9 @@
         <mat-card-header>
           <mat-card-title>
            {{x.name}}
-    
-          <p>{{x.email}}</p> 
         </mat-card-title>
+        <br/>
+        <p style = "font-size: medium;">{{x.email}}</p> 
         </mat-card-header>
         
         <mat-card-content>
@@ -30,7 +30,7 @@
 <form #f="ngForm" (ngSubmit)="sub_post(f)">
     <div class="form-group">
         <label for="x11"> Add your comment here </label>
-         <input id ="x11"   type="textarea" name="comm" ngModel/>
+         <input id ="x11"   type="textarea" width="100px" name="comm" ngModel/>
     </div>
       <button >Add comment</button>
 </form>
